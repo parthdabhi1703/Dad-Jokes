@@ -5,44 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dad Jokes</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        -webkit-tap-highlight-color: transparent;
-      }
-
-      .container {
-        height: 80vh;
-      }
-
-      div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      h1 {
-        font-size: 30px;
-        margin: 10px;
-        margin-top: 50px;
-      }
-
-      button {
-        margin: 10px;
-        padding: 10px;
-        background-color: orange;
-        color: black;
-        font-size: large;
-        border-radius: 10px;
-      }
-
-      p {
-        margin: 10px;
-        font-weight: 500;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
@@ -53,27 +16,6 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    <script>
-      let btn = document.querySelector("button");
-      let url = "https://icanhazdadjoke.com/";
-
-      btn.addEventListener("click", async () => {
-        let p = document.querySelector("#result");
-        p.innerText = "Loading...";
-        let joke = await getJokes();
-        p.innerText = joke;
-      });
-
-      async function getJokes() {
-        try {
-          let config = { headers: { Accept: "application/json" } };
-          let res = await axios.get(url, config);
-          return res.data.joke;
-        } catch (err) {
-          console.log("error : ", err);
-          return "No Joke Found :(";
-        }
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

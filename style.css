@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  height: 80vh;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 30px;
+  margin: 10px;
+  margin-top: 50px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px;
+  background-color: orange;
+  color: black;
+  font-size: large;
+  border-radius: 10px;
+}
+
+p {
+  margin: 10px;
+  font-weight: 500;
+}
